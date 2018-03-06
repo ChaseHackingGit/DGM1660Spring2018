@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: TINBOT_RIG.ma
-//Last modified: Tue, Mar 06, 2018 04:08:41 PM
+//Last modified: Tue, Mar 06, 2018 04:14:44 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -72,7 +72,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1000034875028;
-	setAttr ".ow" 12.158290141361537;
+	setAttr ".ow" 5.2165734945014597;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
