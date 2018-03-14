@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: UV_TINBOT NEW FILE.ma
-//Last modified: Tue, Mar 13, 2018 08:22:36 PM
+//Last modified: Tue, Mar 13, 2018 08:24:09 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "21777919-4703-0773-A185-C4816BBA365C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.6114326489931017 2.0473068127375664 -0.013199482732007523 ;
-	setAttr ".r" -type "double3" 712.46164727386872 446.19999999967439 -1.1997764813882069e-14 ;
+	setAttr ".t" -type "double3" 3.920369048503471 5.6537175889723121 -2.7052081909280679 ;
+	setAttr ".r" -type "double3" 676.4616472738461 482.99999999967235 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FA1355BF-4C3C-C243-5394-1FBB657C20A0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 4.43563974559346;
+	setAttr ".coi" 6.0802533339261409;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
