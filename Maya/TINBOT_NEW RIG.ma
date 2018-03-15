@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: TINBOT_NEW RIG.ma
-//Last modified: Thu, Mar 15, 2018 03:24:21 PM
+//Last modified: Thu, Mar 15, 2018 03:53:05 PM
 //Codeset: 1252
 requires maya "2017ff05";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "21777919-4703-0773-A185-C4816BBA365C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 35.088532120771987 14.711564441006743 9.2762379729340445 ;
-	setAttr ".r" -type "double3" 701.66164727371131 435.39999999947202 -1.2617775930874727e-014 ;
+	setAttr ".t" -type "double3" 4.6603668215974912 6.8567272197581168 1.7084553527120678 ;
+	setAttr ".r" -type "double3" 678.26164727382456 430.99999999946004 -9.7692438214039447e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FA1355BF-4C3C-C243-5394-1FBB657C20A0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 37.776086026415143;
+	setAttr ".coi" 6.0543673113608856;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -66,14 +66,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "47955226-497D-9C80-73B5-F4A05E849B24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1000033682935 1.8870923840071077 -0.78115132811428933 ;
+	setAttr ".t" -type "double3" 1000.1000033682935 1.5607307566203645 -0.33023580191474977 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "B5C1D01A-4CEB-86A6-C281-5FB15129A6C9";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1000034875028;
-	setAttr ".ow" 13.034900733181328;
+	setAttr ".ow" 10.655705170213386;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -17944,7 +17944,7 @@ createNode displayLayer -n "layer1";
 	setAttr ".dt" 2;
 	setAttr ".do" 1;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "1F9A2965-4E38-DBE1-61F6-AD8285EC1EEB";
+	rename -uid "F4B3B8D7-4D0A-8697-5EB3-5F8059D8808D";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -785.71425449280639 -114.28570974440819 ;
 	setAttr ".tgi[0].vh" -type "double2" 755.95235091353356 116.66666203075005 ;
