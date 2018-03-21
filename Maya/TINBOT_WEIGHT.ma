@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: TINBOT_WEIGHT.ma
-//Last modified: Wed, Mar 21, 2018 04:56:12 PM
+//Last modified: Wed, Mar 21, 2018 05:01:52 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "21777919-4703-0773-A185-C4816BBA365C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2211498386892501 4.1012412076513476 -13.490040131125813 ;
-	setAttr ".r" -type "double3" 704.06164726454904 -2704.6000000013432 0 ;
+	setAttr ".t" -type "double3" 15.101690035089582 5.188505404068156 1.0610459402514039 ;
+	setAttr ".r" -type "double3" 705.86164726442473 -2796.6000000008225 -6.9180301308806805e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FA1355BF-4C3C-C243-5394-1FBB657C20A0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.737378071256085;
+	setAttr ".coi" 17.359640741436785;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -17271,7 +17271,6 @@ createNode joint -n "L_Leg_TOP_JOINT" -p "HIP_JOINT";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 1.3771666813867618 -2.4763177619568921e-16 2.4980018054066022e-16 ;
-	setAttr ".r" -type "double3" 0 0 -54.736061174653855 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -17288,7 +17287,6 @@ createNode joint -n "L_KNEE_JOINT" -p "L_Leg_TOP_JOINT";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 1.0187090394748841 2.2827348415124038e-14 -2.3217337865355009e-16 ;
-	setAttr ".r" -type "double3" 0 0 82.341922079166579 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -17304,7 +17302,6 @@ createNode joint -n "L_ANKLE_JOINT" -p "L_KNEE_JOINT";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" 1.0302949769481768 3.8925208600041002e-19 2.2204436961765278e-16 ;
-	setAttr ".r" -type "double3" 0 0 -57.115279657417922 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -17328,7 +17325,6 @@ createNode joint -n "L_FOOT_JOINT" -p "L_ANKLE_JOINT";
 		 -2.2532976054887282e-14 1.0000000000000002 7.1894427891524479e-16 0 -1.4918621893400541e-16 -8.0433760570796579e-16 1.0000000000000004 0
 		 0.0010693018435854031 0.13908820996134863 -1.3768355419655365 1;
 	setAttr ".radi" 0.5;
-	setAttr ".liw" yes;
 createNode joint -n "R_Leg_TOP_JOINT" -p "HIP_JOINT";
 	rename -uid "75509EDE-47A8-F01A-DBBB-BBA36D5C421C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -17351,7 +17347,6 @@ createNode joint -n "R_KNEE_JOINT" -p "R_Leg_TOP_JOINT";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 1.0187099999999998 2.2621933924772112e-16 2.2602347433173728e-16 ;
-	setAttr ".r" -type "double3" 0.50631011569654238 -9.7106755659116928 77.808727014053289 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -23315,7 +23310,7 @@ connectAttr "R_Leg_TOP_JOINT.obcc" "skinCluster1.ifcl[5]";
 connectAttr "R_KNEE_JOINT.obcc" "skinCluster1.ifcl[6]";
 connectAttr "R_ANKLE_JOINT.obcc" "skinCluster1.ifcl[7]";
 connectAttr "R_FOOT_JOINT.obcc" "skinCluster1.ifcl[8]";
-connectAttr "HIP_JOINT.msg" "skinCluster1.ptt";
+connectAttr "R_KNEE_JOINT.msg" "skinCluster1.ptt";
 connectAttr "TINBOT_meshShapeOrig.w" "groupParts1.ig";
 connectAttr "groupId1.id" "groupParts1.gi";
 connectAttr "groupParts3.og" "tweak1.ip[0].ig";
