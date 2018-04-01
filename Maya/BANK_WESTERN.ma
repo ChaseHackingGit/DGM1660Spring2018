@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: BANK_WESTERN.ma
-//Last modified: Sat, Mar 31, 2018 11:07:31 PM
+//Last modified: Sat, Mar 31, 2018 11:19:05 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D20311DE-4409-9BE8-727E-9F8953F12C23";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.284567558300418 7.9278406263838885 -13.864475390251005 ;
-	setAttr ".r" -type "double3" -8.1383527167039524 133.00000000002063 0 ;
+	setAttr ".t" -type "double3" 17.662717756172878 7.5725307839028666 -12.563802079109198 ;
+	setAttr ".r" -type "double3" -9.9383527167029246 127.00000000001953 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BD371D50-4F0E-2428-5DB7-C6BEDADC35A3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.791721469216967;
+	setAttr ".coi" 20.79172146921627;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
