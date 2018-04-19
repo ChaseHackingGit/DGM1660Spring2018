@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: CART_WHEEL UVS.ma
-//Last modified: Thu, Apr 19, 2018 02:45:09 PM
+//Last modified: Thu, Apr 19, 2018 02:47:22 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2DA622F3-467B-FE0A-D325-FE83140989E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.070446743275808 -0.93451695622769515 -0.21989372699217977 ;
-	setAttr ".r" -type "double3" 726.26164727093783 -13774.199999997023 0 ;
+	setAttr ".t" -type "double3" 1.699804172124624 -0.22449706167682515 -1.6565379959295758 ;
+	setAttr ".r" -type "double3" 708.2616472729552 -13906.199999996106 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E5E83CA1-49E4-67C9-DEAA-9CAACAE0D0F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2.1288974558528118;
+	setAttr ".coi" 2.348687048630254;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -47738,7 +47738,7 @@ createNode mesh -n "polySurface28Shape31" -p "polySurface31";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.60048806024362333 -0.21781061589717865 ;
+	setAttr ".pv" -type "double2" 0.46680340170860291 0.1311957836151123 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -54673,10 +54673,10 @@ createNode displayLayer -n "layer1";
 	setAttr ".do" 1;
 createNode displayLayer -n "layer2";
 	rename -uid "9D6C22E8-4C8B-7E4F-7943-FDBCB546BE79";
+	setAttr ".v" no;
 	setAttr ".do" 2;
 createNode displayLayer -n "layer3";
 	rename -uid "18FFDFDB-45A9-6158-F121-2C8DD2A922AE";
-	setAttr ".v" no;
 	setAttr ".do" 3;
 createNode displayLayer -n "layer4";
 	rename -uid "42C162A5-4E53-AA4B-D6D6-B4A513A2DAD2";
