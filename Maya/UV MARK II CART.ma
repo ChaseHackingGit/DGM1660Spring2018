@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: UV MARK II CART.ma
-//Last modified: Sat, Apr 21, 2018 05:10:18 PM
+//Last modified: Sat, Apr 21, 2018 05:20:42 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2DA622F3-467B-FE0A-D325-FE83140989E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.3657014504955218 0.4390770006109096 -0.69590390824446191 ;
-	setAttr ".r" -type "double3" 704.06164723371921 -20644.199999993929 0 ;
+	setAttr ".t" -type "double3" 1.9923134397424931 0.50291004168043552 1.3066167764636258 ;
+	setAttr ".r" -type "double3" 711.26164723475631 -20469.399999989488 2.505437044555927e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E5E83CA1-49E4-67C9-DEAA-9CAACAE0D0F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1.9693207718856305;
+	setAttr ".coi" 2.3227666874742603;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -60256,7 +60256,7 @@ createNode transform -n "polySurface101" -p "|polySurface49";
 createNode mesh -n "polySurfaceShape99" -p "polySurface101";
 	rename -uid "87F1D311-4325-DBB3-7641-59BBE32A77DB";
 	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
+	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -60283,7 +60283,7 @@ createNode transform -n "polySurface102" -p "|polySurface49";
 createNode mesh -n "polySurfaceShape100" -p "polySurface102";
 	rename -uid "4BE81D07-48AE-586C-77A5-14B826FB3A91";
 	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
+	setAttr -s 10 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -60338,9 +60338,10 @@ createNode transform -n "polySurface104" -p "|polySurface49";
 createNode mesh -n "polySurfaceShape102" -p "polySurface104";
 	rename -uid "D2A81C44-4591-35CB-3FC4-69966D67BF0B";
 	setAttr -k off ".v";
-	setAttr -s 6 ".iog[0].og";
+	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.18875716626644135 0.52426172772185176 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcol" yes;
@@ -60368,6 +60369,7 @@ createNode mesh -n "polySurfaceShape103" -p "polySurface105";
 	setAttr -s 6 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.18461842834949493 0.4837149977684021 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcol" yes;
@@ -60452,7 +60454,7 @@ createNode mesh -n "polySurfaceShape107" -p "polySurface109";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.24992071639280766 0.25007523049134761 ;
+	setAttr ".pv" -type "double2" 0.3645025889347524 0.5000000074505806 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -60492,10 +60494,23 @@ createNode transform -n "polySurface111" -p "|polySurface49";
 createNode mesh -n "polySurfaceShape109" -p "polySurface111";
 	rename -uid "FD9B9117-4888-107D-8056-4D8C6BA303E8";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
+	setAttr -s 8 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.80889062881469731 1.3624373286962508 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode mesh -n "polySurfaceShape109Orig" -p "polySurface111";
+	rename -uid "B4D66D27-490B-16E5-A3BD-D182E55A6343";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -60510,6 +60525,7 @@ createNode mesh -n "polySurfaceShape110" -p "polySurface112";
 	setAttr -s 6 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49368439734185343 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcol" yes;
@@ -60647,7 +60663,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 698\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 698\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 770\n            -height 698\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 1\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
@@ -60676,9 +60692,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n"
 		+ "                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n"
 		+ "                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 50 100 -ps 2 50 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 655\\n    -height 698\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 655\\n    -height 698\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 59 100 -ps 2 41 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 770\\n    -height 698\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 770\\n    -height 698\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"UV Editor\")) \n\t\t\t\t\t\"scriptedPanel\"\n\t\t\t\t\t\"$panelName = `scriptedPanel -unParent  -type \\\"polyTexturePlacementPanel\\\" -l (localizedPanelLabel(\\\"UV Editor\\\")) -mbv $menusOkayInPanels `\"\n\t\t\t\t\t\"scriptedPanel -edit -l (localizedPanelLabel(\\\"UV Editor\\\")) -mbv $menusOkayInPanels  $panelName\"\n\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -73103,55 +73119,54 @@ createNode polyMapSewMove -n "polyMapSewMove261";
 createNode polyTweakUV -n "polyTweakUV56";
 	rename -uid "6F78044C-46A8-3EF4-94D6-C793388963C3";
 	setAttr ".uopa" yes;
-	setAttr -s 164 ".uvtk[0:163]" -type "float2" -0.00014212728 0.00024366379
-		 -5.9872866e-05 0.00027567148 -3.7848949e-05 0.00026288629 -0.00011736155 0.00023813546
-		 2.9802322e-08 1.1920929e-07 2.810359e-05 0.0002807565 4.5120716e-05 0.00026162341
-		 0.00011208653 0.00015451759 5.877018e-05 0.00018142164 -0.00021052361 0.00018790364
-		 -0.00018528104 0.00019034743 0.00011378527 0.00025811419 0.00012367964 0.00023476873
-		 0.00015443563 0.00011240691 -8.9406967e-08 0.00019088387 -0.00025823712 0.00011384487
-		 -0.00023463368 0.00012394786 0.00018793344 0.00021048728 0.00019037724 0.00018497417
-		 0.00018149614 5.8947131e-05 -5.9038401e-05 0.00018137693 -0.00028073788 2.8282404e-05
-		 -0.00026160479 4.5031309e-05 0.00024369359 0.00014191493 0.00023823977 0.00011706166
-		 0.00019091368 6.3562766e-08 -0.00011244416 0.00015428662 -0.00027561188 -5.9813261e-05
-		 -0.00026291609 -3.7819147e-05 0.00027579814 5.986914e-05 0.00026273727 3.7875026e-05
-		 0.00018163025 -5.9075654e-05 -0.00015446544 0.00011211634 -0.00024354458 -0.00014233589
-		 -0.00023812056 -0.00011748075 0.00028094649 -2.823025e-05 0.00026182085 -4.4964254e-05
-		 0.00015426427 -0.00011196733 -0.00018167496 5.8948994e-05 -0.00018776953 -0.0002104342
-		 -0.00019019842 -0.00018528104 0.00025831349 -0.00011368096 0.00023469608 -0.00012376904
-		 0.00011229143 -0.00015411526 -0.00019073486 -3.5762787e-07 -0.00011362135 -0.00025835633
-		 -0.00012369454 -0.00023499131 0.00021050777 -0.00018779933 0.00018489733 -0.00019024312
-		 5.8876351e-05 -0.00018158555 -0.00018133223 -5.8889389e-05 -2.8215349e-05 -0.00028055906
-		 -4.5225024e-05 -0.00026145577 0.00014218874 -0.00024348497 0.00011706352 -0.00023803115
-		 -8.8242814e-08 -0.00019076467 -0.00015453994 -0.00011214614 6.0033053e-05 -0.00027564168
-		 3.8035214e-05 -0.00026285648 -5.9084967e-05 -0.00018158555 -0.00011210516 -0.00015443563
-		 -0.60810137 0.15666682 -0.64143372 0.053790331 -0.30000031 3.5762787e-07 -0.61194903
-		 0.15864545 -0.64570504 0.054483056 -0.64134508 -0.054350734 -0.54460865 0.24420726
-		 -0.61278754 0.1592195 -0.64668047 0.054769635 -0.64562136 -0.055012107 -0.54765731
-		 0.24727833 -0.60784286 -0.15717232 -0.45717305 0.30784297 -0.64663738 -0.055040956
-		 -0.5482769 0.24808329 -0.61170632 -0.15912259 -0.45912272 0.31170559 -0.54420745
-		 -0.24460858 -0.35435098 0.34134507 -0.61266369 -0.15946358 -0.45946372 0.31266308
-		 -0.5472784 -0.24765646 -0.35501218 0.34562123 -0.45666665 -0.30810058 -0.24620962
-		 0.34143442 -0.54808342 -0.24827754 -0.35504109 0.34663725 -0.45864546 -0.3119489
-		 -0.24551696 0.34570491 -0.3537904 -0.34143347 -0.14333355 0.3081007 -0.45921946 -0.31278771
-		 -0.24523032 0.3466804 -0.35448384 -0.34570473 -0.1413548 0.31194901 -0.24564834 -0.34134489
-		 -0.055793345 0.24460876 -0.35476965 -0.34668028 -0.14078158 0.31278765 -0.24498786
-		 -0.34562105 -0.052722394 0.2476567 -0.14282769 -0.30784297 0.0078428388 0.15717244
-		 -0.24495958 -0.34663707 -0.051917374 0.24827772 -0.14087802 -0.31170553 0.011705518
-		 0.15912288 -0.055391371 -0.24420667 0.041345179 0.054351747 -0.14053625 -0.31266284
-		 0.012662768 0.1594637 -0.052343488 -0.24727774 0.04562068 0.055012286 0.0081006885
-		 -0.15666676 0.041434318 -0.053790212 -0.051722437 -0.24808288 0.046637475 0.055041134
-		 0.011948228 -0.15864539 0.045704931 -0.054482937 0.01278764 -0.15921944 0.046679616
-		 -0.054769337 -0.29256833 0.33133927 -0.29371715 0.32716194 -0.29479262 0.32687357
-		 -0.2936438 0.33105078 -0.29486638 0.30871132 -0.29594186 0.3084226 -0.29141971 0.3280119
-		 -0.29249519 0.32772341 -0.29027113 0.32468501 -0.29134661 0.32439652 -0.28912231
-		 0.32886186 -0.29019779 0.3285735 -0.28797308 0.3473126 -0.28904855 0.34702423 -0.30407488
-		 0.29103753 -0.30522576 0.28686062 -0.30630124 0.28657165 -0.30515036 0.29074857 -0.30637664
-		 0.26840839 -0.30745208 0.2681224 -0.30292401 0.2877101 -0.30399948 0.28742114 -0.30177313
-		 0.28438351 -0.30284861 0.28409454 -0.30062228 0.28856042 -0.30169773 0.28827146 -0.29947138
-		 0.30701116 -0.30054685 0.30672219 -0.30976203 0.27088404 -0.31089205 0.26670659 -0.31196749
-		 0.26642355 -0.31083751 0.27060091 -0.30863431 0.26755688 -0.30970979 0.26727381 -0.30750659
-		 0.26422963 -0.30858207 0.26394656 -0.29832011 0.31118944 -0.29939562 0.31090036 -0.29716885
-		 0.30786195 -0.29824436 0.30757311 -0.29601759 0.30453494 -0.29709309 0.30424586;
+	setAttr -s 164 ".uvtk[0:163]" -type "float2" -0.15490416 -0.056755073
+		 -0.14379662 -0.035043545 -0.14456594 -0.034482352 -0.15580937 -0.056459248 -0.080809847
+		 -0.080964267 -0.1265237 -0.01782703 -0.1270819 -0.017055746 -0.14462343 -0.034440212
+		 -0.15587702 -0.056436941 -0.15875879 -0.080836266 -0.15971115 -0.080834597 -0.10477547
+		 -0.0067911008 -0.10506845 -0.0058849361 -0.12712339 -0.016997736 -0.1597822 -0.080834225
+		 -0.15498331 -0.10492991 -0.15588918 -0.10522263 -0.080681756 -0.0030154567 -0.080680087
+		 -0.002063395 -0.10508999 -0.0058170641 -0.15595734 -0.10524455 -0.14394718 -0.12667796
+		 -0.14471847 -0.12723646 -0.056600571 -0.0068703108 -0.056304693 -0.0059651732 -0.08067973
+		 -0.0019920319 -0.14477649 -0.12727797 -0.12673062 -0.14395106 -0.12729186 -0.14472041
+		 -0.034888975 -0.017977603 -0.034328096 -0.017208267 -0.0562822 -0.0058975173 -0.12733397
+		 -0.14477792 -0.10501905 -0.1550588 -0.10531496 -0.15596393 -0.017672416 -0.035250708
+		 -0.016901124 -0.034692205 -0.034286022 -0.017150685 -0.10533756 -0.15603125 -0.080937862
+		 -0.1589132 -0.080939516 -0.15986562 -0.0066363625 -0.05699867 -0.0057305004 -0.056705944
+		 -0.016843449 -0.034650601 -0.080939889 -0.15993699 -0.056844145 -0.15513787 -0.056551412
+		 -0.15604404 -0.002860958 -0.081092373 -0.0019089628 -0.081094027 -0.0056626275 -0.056684397
+		 -0.056529619 -0.1561116 -0.035096213 -0.14410153 -0.034538023 -0.14487284 -0.0067155212
+		 -0.1051735 -0.0058106873 -0.10546938 -0.0018376508 -0.081094384 -0.034496523 -0.14493078
+		 -0.017823007 -0.12688512 -0.017053675 -0.12744632 -0.0057430388 -0.10549197 -0.016996413
+		 -0.12748843 -0.78749043 -0.15986252 -0.79916042 -0.25168008 -0.50346977 -0.24261409
+		 -0.79103523 -0.15881336 -0.8028565 -0.25177777 -0.78188705 -0.34260952 -0.74801725
+		 -0.07614553 -0.79179442 -0.15848297 -0.80368114 -0.25169843 -0.78537196 -0.34384483
+		 -0.75106514 -0.074052095 -0.73735988 -0.42375141 -0.68460715 -0.0087239146 -0.78618056
+		 -0.34402424 -0.75168455 -0.073503375 -0.74029332 -0.4260031 -0.68685812 -0.0057913065
+		 -0.66993845 -0.48716223 -0.60346466 0.035803139 -0.74100691 -0.42642313 -0.68727815
+		 -0.0050776601 -0.67203182 -0.49020934 -0.60469985 0.039287984 -0.58622122 -0.52663469
+		 -0.51253498 0.053077221 -0.6725806 -0.49083024 -0.60487926 0.040096581 -0.58727056
+		 -0.53018022 -0.51263273 0.05677253 -0.49440384 -0.53830528 -0.42071775 0.041405857
+		 -0.58760083 -0.53093958 -0.51255333 0.05759722 -0.49430686 -0.54200131 -0.4196685
+		 0.044951379 -0.40347347 -0.52103198 -0.33700114 0.0019334555 -0.49438548 -0.54282606
+		 -0.41933894 0.045710623 -0.40223902 -0.52451682 -0.33490777 0.0049805641 -0.32233244
+		 -0.47650498 -0.26957899 -0.061477423 -0.40206027 -0.52532542 -0.33435902 0.0056014657
+		 -0.32008147 -0.47943756 -0.2666463 -0.059225649 -0.25892162 -0.40908274 -0.22505173
+		 -0.14261845 -0.31966063 -0.48015112 -0.26593283 -0.058805734 -0.25587451 -0.4111762
+		 -0.22156757 -0.14138398 -0.21944909 -0.32536635 -0.2077778 -0.23354876 -0.25525361
+		 -0.41172504 -0.2207582 -0.14120457 -0.21590437 -0.32641551 -0.20408243 -0.23345107
+		 -0.21514432 -0.3267459 -0.20325854 -0.23353028 -0.011270029 -0.54332036 -0.012052489
+		 -0.52008247 -0.018988978 -0.5202629 -0.018206518 -0.54350078 -0.012835365 -0.51111817
+		 -0.019771855 -0.51129878 -0.010487747 -0.57406282 -0.017424267 -0.57424331 -0.0097055258
+		 -0.60480475 -0.016642045 -0.60498536 -0.0089230658 -0.62804317 -0.015859585 -0.62822342
+		 -0.0081401886 -0.63700747 -0.015076708 -0.63718778 -0.019112986 -0.30947113 -0.019897502
+		 -0.28623289 -0.026834022 -0.28641385 -0.026049506 -0.30965209 -0.020682048 -0.27727011
+		 -0.027618509 -0.27744806 -0.018328469 -0.34021366 -0.02526499 -0.34039462 -0.017543953
+		 -0.37095532 -0.024480473 -0.37113625 -0.016759466 -0.39419356 -0.023695957 -0.39437449
+		 -0.01597492 -0.40315786 -0.022911441 -0.40333882 -0.022968363 -0.19254899 -0.023732018
+		 -0.16931134 -0.030668508 -0.16948639 -0.029904854 -0.19272408 -0.022207003 -0.22329131
+		 -0.029143494 -0.22346634 -0.021445643 -0.25403371 -0.028382134 -0.25420877 -0.015190016
+		 -0.42639473 -0.022126567 -0.42657575 -0.014405113 -0.45713726 -0.021341663 -0.4573181
+		 -0.013620209 -0.48787948 -0.020556759 -0.48806044;
 createNode transferAttributes -n "transferAttributes9";
 	rename -uid "9FAF585A-4E1E-7AAC-D6FA-07A496D0B454";
 	setAttr ".uvs" 2;
@@ -73242,6 +73257,463 @@ createNode groupParts -n "groupParts149";
 	rename -uid "BDB2A37B-4FDE-3DDA-EB5D-7BBDA251B4E5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode polyTweakUV -n "polyTweakUV57";
+	rename -uid "C832EE30-474E-0232-7A15-7E861DC081DB";
+	setAttr ".uopa" yes;
+	setAttr -s 852 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.20714507 -0.018146634 0.20673472
+		 -0.018807858 0.20644102 -0.019528449 0.21115538 -0.021060258 0.20625511 -0.020284146
+		 0.20619839 -0.021060258 0.2082417 -0.017049998 0.20764714 -0.017552048 0.20625511
+		 -0.0218364 0.20644102 -0.022592038 0.20962355 -0.016345888 0.20890296 -0.01663965
+		 0.20673475 -0.023312688 0.20714515 -0.023973882 0.21115535 -0.016103297 0.21037924
+		 -0.016159952 0.20764714 -0.024568498 0.20824173 -0.025070488 0.21268716 -0.016345888
+		 0.21193148 -0.016159952 0.20890293 -0.025480866 0.20962358 -0.025774598 0.21406899
+		 -0.017049938 0.21340775 -0.01663965 0.21037924 -0.025960565 0.21115535 -0.026017249
+		 0.21516563 -0.018146604 0.21466358 -0.017552018 0.21193151 -0.025960565 0.21268718
+		 -0.025774658 0.21586974 -0.019528449 0.21557598 -0.018807828 0.21340778 -0.025480866
+		 0.21406901 -0.025070488 0.21611235 -0.021060258 0.21605565 -0.020284086 0.21466359
+		 -0.024568439 0.21516564 -0.023973882 0.21586972 -0.022592038 0.21605565 -0.02183637
+		 0.21557598 -0.023312688 -0.3163985 -0.24894504 -0.3161386 -0.24958269 -0.31577551
+		 -0.2501677 -0.31222719 -0.24758972 -0.31533128 -0.25069383 -0.31480521 -0.25113806
+		 -0.3166132 -0.24758969 -0.31656301 -0.24827643 -0.31422013 -0.25150111 -0.31358251
+		 -0.25176105 -0.3163985 -0.24623434 -0.31656301 -0.24690296 -0.31291389 -0.2519255
+		 -0.31222719 -0.25197574 -0.31577551 -0.24501166 -0.31613857 -0.24559672 -0.31154042
+		 -0.2519255 -0.31087181 -0.25176105 -0.31480521 -0.24404134 -0.31533128 -0.24448556
+		 -0.31023419 -0.25150111 -0.30964911 -0.25113806 -0.31358254 -0.24341832 -0.31422013
+		 -0.24367829 -0.30912304 -0.25069383 -0.30867881 -0.2501677 -0.31222716 -0.24320368
+		 -0.31291389 -0.24325387 -0.30831572 -0.24958269 -0.30805582 -0.24894504 -0.31087178
+		 -0.24341835 -0.31154042 -0.24325387 -0.30789131 -0.24827643 -0.30784112 -0.24758972
+		 -0.30964914 -0.24404134 -0.31023419 -0.24367832 -0.30789131 -0.24690299 -0.30805579
+		 -0.24623437 -0.30867878 -0.24501166 -0.30912304 -0.24448556 -0.30831572 -0.24559672
+		 -0.26451916 -0.31459147 -0.26418167 -0.31541923 -0.26323444 -0.31493667 -0.26350892
+		 -0.31426328 -0.26371044 -0.31617883 -0.26285106 -0.31555462 -0.2636826 -0.31355712
+		 -0.26473266 -0.31372339 -0.2631337 -0.31686187 -0.26238185 -0.31611019 -0.26479781
+		 -0.31283185 -0.26373559 -0.31283188 -0.26245075 -0.31743866 -0.26182634 -0.3165794
+		 -0.2636826 -0.31210661 -0.2647326 -0.31194031 -0.26169121 -0.31791002 -0.26120847
+		 -0.3169629 -0.2645191 -0.31107226 -0.26350892 -0.31140044 -0.26086342 -0.31824762
+		 -0.26053506 -0.3172375 -0.26323438 -0.31072709 -0.26418161 -0.31024447 -0.2599954
+		 -0.31846121 -0.25982893 -0.31741124 -0.26371032 -0.30948487 -0.262851 -0.31010914
+		 -0.2591038 -0.31852651 -0.25910366 -0.31746429 -0.26238179 -0.30955356 -0.26313359
+		 -0.30880189 -0.25821224 -0.31846142 -0.25837833 -0.31741136 -0.2624507 -0.3082251
+		 -0.26182628 -0.30908436 -0.2573441 -0.31824797 -0.2576721 -0.31723773 -0.26120836
+		 -0.30870089 -0.26169103 -0.30775374 -0.25651622 -0.31791058 -0.25699863 -0.31696326
+		 -0.2608633 -0.3074162 -0.260535 -0.30842632 -0.25575653 -0.31743935 -0.25638062 -0.31657988
+		 -0.25982881 -0.30825257 -0.25999528 -0.30720258 -0.2550734 -0.31686264 -0.25582486
+		 -0.31611073 -0.25910372 -0.30713734 -0.25910354 -0.3081995 -0.2544964 -0.31617972
+		 -0.25535554 -0.31555513 -0.25837821 -0.30825248 -0.25821212 -0.30720246 -0.25402483
+		 -0.31542012 -0.25497186 -0.3149372 -0.25734398 -0.30741587 -0.25767201 -0.30842611
+		 -0.25368708 -0.31459227 -0.25469729 -0.31426364 -0.25699854 -0.30870059 -0.25651613
+		 -0.30775329 -0.25347319 -0.31372389 -0.2545228 -0.3135576 -0.25575641 -0.30822456
+		 -0.25638053 -0.309084 -0.25340861 -0.31283197 -0.25447148 -0.31283197 -0.25582477
+		 -0.30955315 -0.25507331 -0.30880123 -0.25347319 -0.31194001 -0.25452277 -0.31210631
+		 -0.25449634 -0.30948418 -0.25535548 -0.31010878 -0.25368702 -0.31107166 -0.25469723
+		 -0.31140026 -0.25497183 -0.3107267 -0.25402477 -0.31024379 0.058887944 -0.53969043
+		 0.0591629 -0.54036361 0.059382275 -0.54025179 0.059121922 -0.53961426 0.0595465 -0.54098141
+		 0.059745565 -0.54083669 0.058956921 -0.53894567 0.058713689 -0.53898448 0.060015813
+		 -0.54153693 0.060189962 -0.5413627 0.058659896 -0.53825933 0.058905974 -0.53825897
+		 0.060571417 -0.54200608 0.060716093 -0.541807 0.058955237 -0.53757221 0.058711886
+		 -0.53753406 0.061189309 -0.54238957 0.061301172 -0.54217011 0.058884218 -0.53682768
+		 0.05911842 -0.5369032 0.061862588 -0.54266435 0.061938733 -0.54243028 0.059376717
+		 -0.53626484 0.05915682 -0.53615385 0.06256862 -0.54283839 0.062607318 -0.54259515
+		 0.059537008 -0.53553444 0.059737325 -0.53567773 0.063293785 -0.54289198 0.063294068
+		 -0.54264593 0.060175195 -0.53514671 0.060001269 -0.53497285 0.064019062 -0.54283977
+		 0.063980862 -0.54259652 0.060562745 -0.53450841 0.060706064 -0.53470868 0.064725362
+		 -0.54266727 0.064649813 -0.54243314 0.061293051 -0.53434801 0.061182037 -0.53412813
+		 0.065399133 -0.54239458 0.065288097 -0.5421747 0.061855808 -0.53385538 0.061931357
+		 -0.53408951 0.066018388 -0.54201418 0.065875083 -0.54181391 0.0626003 -0.53392619
+		 0.062562108 -0.53368282 0.066579886 -0.5415498 0.066405982 -0.54137594 0.063287362
+		 -0.53363061 0.063287109 -0.53387672 0.067044139 -0.54098815 0.06684383 -0.54084486
+		 0.063973844 -0.5339275 0.06401255 -0.53368425 0.067424364 -0.5403688 0.067204431
+		 -0.54025781 0.064718552 -0.53385824 0.064642422 -0.53409231 0.067696936 -0.53969496
+		 0.067462735 -0.53961951 0.065279998 -0.53435248 0.065391846 -0.53413308 0.067869261
+		 -0.53898865 0.06762594 -0.5389505 0.066009715 -0.53451657 0.065865055 -0.53471565
+		 0.067921244 -0.53826332 0.067675173 -0.53826362 0.0663912 -0.53515989 0.06656532
+		 -0.53498572 0.067867458 -0.53753823 0.067624234 -0.53757697 0.067034654 -0.53554124
+		 0.066835597 -0.53568596 0.067693226 -0.53683215 0.067459241 -0.53690833 0.06719888
+		 -0.53627092 0.067418277 -0.53615898 0.015823781 0.34316468 0.0154863 0.34399241 0.014951497
+		 0.34381866 0.015322238 0.34290916 0.015272796 0.34486037 0.014716864 0.34477234 0.016295046
+		 0.34240508 0.015840083 0.34207457;
+	setAttr ".uvtk[250:499]" 0.015207589 0.34575188 0.014645219 0.34575188 0.01687178
+		 0.3417221 0.016473711 0.34132415 0.015272737 0.34664345 0.014716774 0.34673142 0.017554671
+		 0.34114534 0.017224073 0.34069046 0.015486151 0.34751138 0.014951289 0.3476851 0.018314213
+		 0.34067398 0.018058598 0.34017256 0.015823543 0.3483392 0.01532203 0.34859464 0.019141942
+		 0.3403365 0.018968046 0.33980164 0.016294748 0.3490988 0.015839696 0.34942928 0.020009965
+		 0.34012282 0.01992178 0.33956692 0.016871393 0.34978184 0.016473293 0.35017973 0.020901501
+		 0.34005755 0.020901367 0.33949521 0.017554253 0.35035866 0.017223567 0.35081354 0.021793112
+		 0.34012255 0.021880969 0.33956668 0.018313736 0.35083008 0.018058062 0.35133153 0.022661231
+		 0.34033597 0.022834823 0.33980113 0.019141421 0.35116774 0.018967479 0.35170251 0.023489177
+		 0.34067333 0.023744516 0.34017172 0.020009428 0.35138139 0.019921184 0.35193729 0.024248891
+		 0.34114459 0.024579279 0.34068951 0.020900965 0.35144678 0.020900756 0.35200915 0.024932224
+		 0.34172124 0.025330003 0.34132311 0.021792546 0.35138181 0.021880403 0.3519378 0.025509171
+		 0.34240434 0.025964014 0.34207353 0.022660717 0.35116851 0.022834279 0.35170338 0.025981054
+		 0.34316385 0.026482426 0.34290814 0.023488693 0.35083121 0.023743972 0.35133284 0.026318677
+		 0.34399208 0.026853547 0.34381789 0.024248481 0.35036001 0.024578817 0.35081515 0.026533864
+		 0.34485996 0.027089514 0.34477225 0.024931841 0.34978345 0.025329586 0.35018167 0.026595324
+		 0.34575239 0.02715813 0.34575245 0.025508862 0.34910044 0.025963664 0.34943128 0.026533797
+		 0.34664491 0.027089398 0.34673268 0.025980834 0.34834093 0.02648215 0.34859678 0.026318483
+		 0.34751275 0.026853353 0.34768707 -0.32530898 0.027938411 -0.32582882 0.027104586
+		 -0.32532823 0.026848637 -0.32485509 0.027607553 -0.32620221 0.026194721 -0.32566819
+		 0.026021294 -0.32467008 0.026512131 -0.32425839 0.027172849 -0.32467425 0.028687987
+		 -0.32427722 0.028289925 -0.3264347 0.025239155 -0.32587928 0.025152102 -0.32496822
+		 0.025793925 -0.32375538 0.027767085 -0.32392338 0.029320855 -0.32359362 0.02886619
+		 -0.32650414 0.024259001 -0.32594243 0.024259999 -0.32514894 0.025037587 -0.32316035
+		 0.028268881 -0.32308859 0.029838182 -0.32283369 0.029337168 -0.32643107 0.023279533
+		 -0.32587591 0.023368284 -0.32520419 0.024260998 -0.32249874 0.028678879 -0.32217905
+		 0.030208584 -0.32200569 0.029674359 -0.32619545 0.022326156 -0.32566148 0.022500291
+		 -0.32514644 0.023484677 -0.32177794 0.02897241 -0.32122529 0.030442905 -0.32113749
+		 0.029887684 -0.32582405 0.021417052 -0.32532334 0.021672636 -0.32495987 0.022728965
+		 -0.32102212 0.029158115 -0.32024574 0.030514367 -0.3202458 0.029952701 -0.32530576
+		 0.020582855 -0.32485157 0.020913243 -0.32466549 0.022008449 -0.32024592 0.029214758
+		 -0.31926617 0.030442711 -0.31935415 0.029887453 -0.32467178 0.01983276 -0.32427442
+		 0.020230442 -0.32425481 0.021347329 -0.31946969 0.029157948 -0.31831241 0.030208129
+		 -0.31848595 0.029673949 -0.3239212 0.019199342 -0.32359117 0.019653827 -0.3237524
+		 0.020752966 -0.3187139 0.028972082 -0.31740287 0.029837452 -0.31765798 0.02933652
+		 -0.3230865 0.018681675 -0.32283139 0.019182622 -0.32315761 0.020250976 -0.31799319
+		 0.028678332 -0.31656817 0.029319815 -0.31689817 0.028865311 -0.32217693 0.018310994
+		 -0.32200342 0.018845201 -0.32249618 0.019840807 -0.31733176 0.028268155 -0.31581759
+		 0.028686356 -0.31621492 0.028288685 -0.32122317 0.01807642 -0.32113522 0.018631697
+		 -0.32177544 0.019547045 -0.316737 0.027766176 -0.31518358 0.027936295 -0.3156378
+		 0.027605906 -0.32024363 0.018004745 -0.32024357 0.01856643 -0.32101965 0.019361198
+		 -0.31623453 0.027171783 -0.31466529 0.027102113 -0.315166 0.026846476 -0.31926408
+		 0.018076211 -0.31935188 0.018631488 -0.32024342 0.019304395 -0.31582385 0.026510656
+		 -0.31429389 0.026192971 -0.31482786 0.026018851 -0.31831032 0.018310547 -0.31848365
+		 0.018844783 -0.31946722 0.019361019 -0.31552947 0.02579017 -0.3140583 0.025239602
+		 -0.31461343 0.02515085 -0.31740075 0.01868093 -0.31765565 0.019181997 -0.31871143
+		 0.019546688 -0.3153429 0.025034457 -0.31398523 0.024260104 -0.31454691 0.024259135
+		 -0.31656599 0.019198269 -0.31689572 0.019652933 -0.3179906 0.01984027 -0.31528515
+		 0.024258137 -0.31405464 0.02328001 -0.31461009 0.023367032 -0.31581512 0.019831181
+		 -0.31621215 0.020229191 -0.31732902 0.020250261 -0.3153404 0.023481548 -0.31428719
+		 0.022324383 -0.31482115 0.022497833 -0.31518036 0.020580709 -0.31563428 0.020911574
+		 -0.31673396 0.020752072 -0.31552118 0.022725224 -0.31466055 0.021414548 -0.31516111
+		 0.021670535 -0.31623101 0.021346256 -0.31581926 0.022007018 -0.12834692 -0.69194043
+		 -0.12832999 -0.69111258 -0.130741 -0.69112027 -0.13072616 -0.69194806 -0.12835222
+		 -0.69028485 -0.13073146 -0.69029248 -0.13073564 -0.69277585 -0.12832463 -0.69276816
+		 -0.1283353 -0.68945694 -0.1307463 -0.68946475 -0.12834156 -0.69359601 -0.13072085
+		 -0.69360363 -0.12835753 -0.68862927 -0.13073683 -0.6886369 -0.13073039 -0.69443142
+		 -0.12831938 -0.69442368 -0.1283406 -0.68780136 -0.13075161 -0.68780911 -0.12833631
+		 -0.69525158 -0.13071561 -0.69525921 -0.13072503 -0.69608706 -0.12831402 -0.69607925
+		 -0.12833101 -0.69690716 -0.13071024 -0.69691479 -0.13071972 -0.69774264 -0.12830871
+		 -0.69773489 -0.12832564 -0.69856274 -0.13070494 -0.69857037 -0.13071442 -0.69939816
+		 -0.12830335 -0.69939047 -0.12828308 -0.71180737 -0.12826616 -0.71097952 -0.13067722
+		 -0.71098721 -0.13066238 -0.71181506 -0.12828845 -0.71015179 -0.13066769 -0.71015942
+		 -0.13067186 -0.71264291 -0.12826085 -0.7126351 -0.12827146 -0.70932394 -0.13068253
+		 -0.70933169 -0.12827778 -0.71346295 -0.13065708 -0.71347064 -0.12829375 -0.70849621
+		 -0.13067305 -0.70850384 -0.13066655 -0.71429843 -0.12825555 -0.71429074 -0.12827682
+		 -0.70766836 -0.13068783 -0.70767611 -0.12827247 -0.71511853 -0.13065171 -0.71512616
+		 -0.12829912 -0.70684063 -0.1306783 -0.70684832 -0.13066125 -0.71595401 -0.12825018
+		 -0.71594626 -0.12828207 -0.70601279 -0.1306932 -0.70602053 -0.12830436 -0.70518506
+		 -0.13068366 -0.70519274;
+	setAttr ".uvtk[500:749]" -0.12828743 -0.70435721 -0.13069844 -0.70436496 -0.20000559
+		 -0.13937286 -0.20001829 -0.1386995 -0.20132935 -0.13870057 -0.20129931 -0.13937393
+		 -0.20000672 -0.13802612 -0.20130044 -0.13802716 -0.20132816 -0.14004731 -0.20001721
+		 -0.14004624 -0.20001948 -0.13735273 -0.20133042 -0.13735381 -0.20000452 -0.14071959
+		 -0.20129824 -0.1407207 -0.20000786 -0.13667935 -0.20130157 -0.13668042 -0.20132709
+		 -0.14139408 -0.20001608 -0.14139298 -0.20002055 -0.13600597 -0.2013315 -0.13600707
+		 -0.20000345 -0.14206636 -0.20129704 -0.1420674 -0.20132595 -0.14274082 -0.20001501
+		 -0.14273974 -0.20000225 -0.14341313 -0.20129597 -0.1434142 -0.20132488 -0.14408758
+		 -0.20001382 -0.14408648 -0.20000112 -0.14475983 -0.20129484 -0.14476091 -0.20132375
+		 -0.14543432 -0.20001274 -0.14543325 -0.25120425 -0.11911923 -0.25119162 -0.11848164
+		 -0.25248528 -0.11848074 -0.2525152 -0.11911833 -0.25120336 -0.1178441 -0.2525143
+		 -0.11784318 -0.25119245 -0.11975682 -0.25248623 -0.11975592 -0.25119078 -0.11720654
+		 -0.25248444 -0.11720565 -0.25120509 -0.12039435 -0.25251603 -0.12039346 -0.25120246
+		 -0.11656898 -0.25251341 -0.11656806 -0.2511934 -0.12103194 -0.25248706 -0.12103105
+		 -0.25118983 -0.11593139 -0.25248355 -0.1159305 -0.25120598 -0.12166953 -0.25251698
+		 -0.12166864 -0.25120157 -0.11529383 -0.25251251 -0.11529291 -0.25118893 -0.11465627
+		 -0.25248265 -0.11465538 -0.25120068 -0.11401868 -0.25251162 -0.11401778 -0.25118804
+		 -0.11338115 -0.25248176 -0.11338025 -0.25119984 -0.11274359 -0.25251079 -0.11274266
+		 -0.19999224 -0.15553385 -0.20000499 -0.1548605 -0.20131594 -0.15486157 -0.20128596
+		 -0.15553492 -0.19999343 -0.15418714 -0.20128703 -0.15418816 -0.20131481 -0.15620834
+		 -0.20000386 -0.1562072 -0.20000613 -0.15351373 -0.20131707 -0.15351486 -0.19999117
+		 -0.15688062 -0.20128483 -0.15688169 -0.1999945 -0.15284038 -0.20128816 -0.15284145
+		 -0.20131373 -0.1575551 -0.20000273 -0.15755397 -0.2000072 -0.15216696 -0.20131814
+		 -0.1521681 -0.19999003 -0.15822738 -0.20128369 -0.15822846 -0.19999564 -0.15149361
+		 -0.2012893 -0.15149468 -0.2013126 -0.15890187 -0.20000166 -0.15890074 -0.20000833
+		 -0.15082026 -0.20131934 -0.15082133 -0.19999665 -0.15014687 -0.20129043 -0.15014794
+		 -0.20000947 -0.14947349 -0.20132041 -0.14947456 -0.25119364 -0.10381761 -0.25118101
+		 -0.10318005 -0.25247467 -0.10317913 -0.25250459 -0.10381667 -0.25119269 -0.10254247
+		 -0.25250369 -0.10254157 -0.25118184 -0.10445517 -0.2524755 -0.10445428 -0.25118011
+		 -0.10190493 -0.25247383 -0.10190403 -0.25119448 -0.10509273 -0.25250542 -0.10509184
+		 -0.25119179 -0.10126732 -0.2525028 -0.10126644 -0.25118279 -0.10573032 -0.25247645
+		 -0.10572943 -0.25117922 -0.10062979 -0.25247294 -0.10062887 -0.25119531 -0.10636786
+		 -0.25250638 -0.10636696 -0.2511909 -0.099992216 -0.25250185 -0.099991292 -0.25118363
+		 -0.10700545 -0.25247735 -0.10700452 -0.25119627 -0.10764301 -0.25250721 -0.10764211
+		 -0.25118452 -0.1082806 -0.25247824 -0.10827971 -0.25119716 -0.10891816 -0.2525081
+		 -0.10891721 -0.33785886 -0.022571802 -0.33787847 -0.023481369 -0.33714205 -0.023481429
+		 -0.33711261 -0.022571862 -0.33785892 -0.024390936 -0.33711267 -0.024390936 -0.33787841
+		 -0.021662295 -0.33714199 -0.021662295 -0.33787858 -0.025300503 -0.33714211 -0.025300503
+		 -0.3378588 -0.020752728 -0.33711255 -0.020752728 -0.33785897 -0.02621007 -0.33711272
+		 -0.026210129 -0.33787835 -0.019843102 -0.33714193 -0.019843161 -0.33787864 -0.027119637
+		 -0.33714223 -0.027119637 -0.33785874 -0.018933564 -0.33711249 -0.018933594 -0.33785903
+		 -0.028029203 -0.33711278 -0.028029203 -0.3378787 -0.02893877 -0.33714223 -0.02893883
+		 -0.33785915 -0.029848337 -0.3371129 -0.029848337 -0.33787876 -0.030757844 -0.33714235
+		 -0.030757904 -0.33785915 -0.031667471 -0.3371129 -0.031667411 -0.33785832 -0.0080188066
+		 -0.33787799 -0.0089283884 -0.33714151 -0.0089284182 -0.33711207 -0.0080188364 -0.33785832
+		 -0.0098379254 -0.33711207 -0.0098379552 -0.33787787 -0.0071092397 -0.33714139 -0.0071092993
+		 -0.33787799 -0.010747492 -0.33714157 -0.010747522 -0.3378582 -0.0061996877 -0.33711195
+		 -0.0061997026 -0.33785844 -0.011657089 -0.33711219 -0.011657119 -0.33787781 -0.0052901059
+		 -0.33714139 -0.0052901357 -0.33787811 -0.012566626 -0.33714169 -0.012566656 -0.3378582
+		 -0.004380554 -0.33711195 -0.0043806136 -0.33785844 -0.013476193 -0.33711219 -0.013476223
+		 -0.33787769 -0.0034710318 -0.33714128 -0.0034710318 -0.33785808 -0.0025614649 -0.33711183
+		 -0.0025614724 -0.33787763 -0.0016518831 -0.33714128 -0.0016519092 -0.33785808 -0.0007423237
+		 -0.33711183 -0.00074236095 0.45831558 -0.76575124 0.45828819 -0.76503086 0.45634875
+		 -0.76504171 0.45637611 -0.76576215 0.45830747 -0.76431018 0.45636803 -0.76432097
+		 0.4582963 -0.76647198 0.45635682 -0.76648283 0.45828015 -0.76358974 0.45634064 -0.76360059
+		 0.45832363 -0.76719236 0.45638421 -0.76720321 0.45829943 -0.762869 0.45635992 -0.76287997
+		 0.45830435 -0.76791304 0.45636493 -0.76792395 0.45827207 -0.76214862 0.45633259 -0.76215953
+		 0.4583317 -0.76863348 0.45639232 -0.76864433 0.45829129 -0.76142794 0.45635188 -0.76143885
+		 0.45826396 -0.7607075 0.45632455 -0.76071835 0.45828331 -0.75998682 0.4563438 -0.75999773
+		 0.45825592 -0.75926638 0.45631647 -0.75927734 0.4582752 -0.75854576 0.45633575 -0.7585566
+		 0.45835286 -0.77655971 0.45837215 -0.77583903 0.4564327 -0.77584994 0.45641342 -0.77657062
+		 0.45834476 -0.77511859 0.45640537 -0.77512956 0.45838025 -0.77728009 0.45644078 -0.777291
+		 0.45836404 -0.77439785 0.45642465 -0.77440876 0.45836097 -0.77800077 0.45642149 -0.77801168
+		 0.45833668 -0.77367747 0.45639727 -0.77368838 0.45838836 -0.77872121 0.45644888 -0.77873212
+		 0.45835596 -0.77295679 0.45641655 -0.7729677 0.45836905 -0.77944195 0.4564296 -0.7794528
+		 0.45839638 -0.78016233 0.45645693 -0.78017324 0.45837709 -0.78088301 0.45643771 -0.78089392
+		 0.45840448 -0.78160346 0.45646504 -0.7816143 0.4583852 -0.78232419 0.45644575 -0.78233504
+		 0.45841259 -0.78304458 0.45647317 -0.78305542 -0.1282565 -0.72008526 -0.12823957
+		 -0.71925741 -0.13065064 -0.71926522 -0.13063574 -0.72009289 -0.1282618 -0.71842968
+		 -0.1306411 -0.71843737 -0.13064528 -0.7209208 -0.12823427 -0.72091305;
+	setAttr ".uvtk[750:851]" -0.12824488 -0.71760184 -0.13065588 -0.71760964 -0.12826717
+		 -0.71677411 -0.13064641 -0.71678174 -0.12830973 -0.70352948 -0.12829274 -0.70270169
+		 -0.13070381 -0.70270938 -0.13068897 -0.70353711 -0.12831497 -0.7018739 -0.13069427
+		 -0.70188153 -0.1282981 -0.70104605 -0.13070905 -0.7010538 -0.12832034 -0.70021832
+		 -0.13069963 -0.70022601 -0.20000893 -0.13533261 -0.20002168 -0.13465925 -0.20133263
+		 -0.13466032 -0.20130265 -0.13533366 -0.20001006 -0.13398585 -0.20130372 -0.13398691
+		 -0.20002276 -0.13331248 -0.20133376 -0.13331355 -0.20001119 -0.1326391 -0.20130491
+		 -0.13264017 -0.20002389 -0.13196573 -0.20133489 -0.1319668 -0.25120687 -0.12294465
+		 -0.2511943 -0.12230712 -0.25248796 -0.12230623 -0.25251782 -0.12294376 -0.25119519
+		 -0.12358224 -0.25248885 -0.12358135 -0.25120777 -0.12421978 -0.25251871 -0.12421888
+		 -0.25119603 -0.12485731 -0.25248981 -0.12485647 -0.25120866 -0.12549496 -0.25251961
+		 -0.125494 -0.19999778 -0.14880013 -0.2000106 -0.14812675 -0.20132148 -0.14812782
+		 -0.20129156 -0.14880118 -0.19999892 -0.14745334 -0.20129263 -0.14745444 -0.20001161
+		 -0.14677998 -0.20132262 -0.14678106 -0.20000005 -0.1461066 -0.20129371 -0.14610767
+		 -0.25119805 -0.11019328 -0.25118542 -0.10955572 -0.25247914 -0.10955483 -0.252509
+		 -0.11019236 -0.25118637 -0.11083087 -0.25248003 -0.11082998 -0.25119889 -0.11146843
+		 -0.25250989 -0.11146751 -0.25118721 -0.112106 -0.25248086 -0.1121051 -0.33785868
+		 -0.01711446 -0.33787823 -0.018023998 -0.33714187 -0.018024057 -0.33711243 -0.01711446
+		 -0.33787823 -0.016204864 -0.33714181 -0.016204923 -0.33785856 -0.015295327 -0.33711237
+		 -0.015295357 -0.33787811 -0.01438576 -0.33714175 -0.01438579 -0.33785939 -0.035305679
+		 -0.33787894 -0.036215246 -0.33714259 -0.036215305 -0.33711314 -0.035305679 -0.33785939
+		 -0.037124753 -0.33711314 -0.037124872 -0.33787888 -0.034396172 -0.33714247 -0.034396172
+		 -0.33785927 -0.033486545 -0.33711302 -0.033486605 -0.33787882 -0.032576978 -0.33714247
+		 -0.032577038 0.45831248 -0.76935416 0.45637304 -0.76936507 0.45833981 -0.77007461
+		 0.45640042 -0.77008545 0.45832047 -0.77079535 0.45638114 -0.77080613 0.45834786 -0.77151573
+		 0.4564085 -0.77152658 0.45832857 -0.77223635 0.45638922 -0.7722472 0.45839325 -0.78376526
+		 0.45645389 -0.7837761 0.45842063 -0.7844857 0.45648116 -0.78449655 0.45840132 -0.78520638
+		 0.45646194 -0.78521723 0.45842871 -0.78592676 0.45648926 -0.78593767 0.45840943 -0.78664744
+		 0.45646998 -0.78665835 0.45843682 -0.78736782 0.45649737 -0.78737879;
+createNode transferAttributes -n "transferAttributes12";
+	rename -uid "03709273-49E4-7429-5235-029087B7FE24";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode objectSet -n "set12";
+	rename -uid "8589ED84-4E00-834A-6A0A-9790A16B1F73";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId209";
+	rename -uid "2436C44D-4F55-E004-A166-C89D48C83B1D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts150";
+	rename -uid "E95CFB8C-4681-D6D2-9BBB-B5B50CB80E25";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode transferAttributes -n "transferAttributes13";
+	rename -uid "D25ABBCF-4CDB-07ED-21F3-12B735A70880";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode tweak -n "tweak12";
+	rename -uid "7EAD9275-44A2-184E-21CA-DFAA9462D85F";
+createNode objectSet -n "set13";
+	rename -uid "7317CD7F-45E7-7AAA-90C0-3081F7F55EB4";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId210";
+	rename -uid "2E128DB8-4E82-4CD2-7CFB-469A4E9AE4A0";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts151";
+	rename -uid "E3891743-4E79-EC97-EAB7-8F85A1F2CD62";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet12";
+	rename -uid "3A2C1E87-4C76-A597-3F71-DBAEC11C4BEA";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId211";
+	rename -uid "100BA4D2-406F-7D16-41F5-C196CA10230A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts152";
+	rename -uid "1607A769-4104-CD18-DA4A-6EA59DEEE0CE";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode transferAttributes -n "transferAttributes14";
+	rename -uid "AD4EEFD6-4414-1AD6-5EFC-CA87CA4F461A";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode objectSet -n "set14";
+	rename -uid "F27092B4-4889-73D6-76AF-93B9984DBAF6";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId212";
+	rename -uid "C225F818-4452-BB4F-4AC5-6E854007011A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts153";
+	rename -uid "CC29E395-4AFB-CC71-E24B-E2A6DCFA2C8F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode transferAttributes -n "transferAttributes15";
+	rename -uid "E82F854B-44CF-3356-4373-2AA04B88BFE2";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode objectSet -n "set15";
+	rename -uid "45B03AFC-40B1-0F0D-E6B8-94B072AE36D5";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId213";
+	rename -uid "DB1450BF-4C52-948A-2617-C68070B1D9B9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts154";
+	rename -uid "4E889C20-4A89-B958-11B0-969B47CC28B7";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode polyTweakUV -n "polyTweakUV58";
+	rename -uid "296E4D4B-44E1-32FF-2083-6F8F4ECBD192";
+	setAttr ".uopa" yes;
+	setAttr -s 164 ".uvtk[0:163]" -type "float2" -0.15476203 -0.056998737
+		 -0.14373675 -0.035319217 -0.14452809 -0.034745239 -0.15569201 -0.056697384 -0.080809876
+		 -0.080964386 -0.12655181 -0.018107787 -0.12712702 -0.01731737 -0.14473552 -0.03459473
+		 -0.15593579 -0.056618363 -0.15854827 -0.08102417 -0.15952587 -0.081024945 -0.10488926
+		 -0.007049215 -0.10519212 -0.0061197048 -0.12727782 -0.017110143 -0.15978211 -0.081025109
+		 -0.15472507 -0.10504375 -0.15565455 -0.10534658 -0.08086969 -0.003225944 -0.080870464
+		 -0.0022483692 -0.10527149 -0.0058760112 -0.1558983 -0.10542592 -0.14366645 -0.12670624
+		 -0.14445686 -0.12728149 -0.056844264 -0.0070122257 -0.056542933 -0.0060822349 -0.080870643
+		 -0.0019920955 -0.14466405 -0.12743226 -0.12645501 -0.14389125 -0.12702894 -0.14468259
+		 -0.035164773 -0.018037472 -0.034590833 -0.017246142 -0.05646383 -0.0058384417 -0.1271795
+		 -0.14489004 -0.1047755 -0.15491647 -0.10507683 -0.15584645 -0.017953362 -0.035222478
+		 -0.017162945 -0.034647241 -0.034440286 -0.017038718 -0.10515589 -0.1560902 -0.080750093
+		 -0.15870276 -0.080749318 -0.15968034 -0.006894676 -0.056884989 -0.0059651965 -0.056582175
+		 -0.016955741 -0.034496486 -0.080749154 -0.15993664 -0.056730524 -0.15487951 -0.056427717
+		 -0.15580904 -0.0030714658 -0.080904573 -0.0020938602 -0.080903783 -0.0057215039 -0.056502812
+		 -0.056348287 -0.15605271 -0.035067998 -0.14382097 -0.034492798 -0.14461139 -0.00685771
+		 -0.10493001 -0.0059277508 -0.10523134 -0.0018375625 -0.08090362 -0.034341983 -0.14481863
+		 -0.01788304 -0.12660947 -0.01709171 -0.12718347 -0.0056839539 -0.10531038 -0.016884308
+		 -0.127334 -0.17938909 -0.31652933 -0.15772669 -0.30547041 -0.20346944 -0.24261445
+		 -0.17908621 -0.31745881 -0.15715143 -0.30626082 -0.14054196 -0.28825879 -0.20340858
+		 -0.32035279 -0.17900689 -0.31770247 -0.15700065 -0.30646807 -0.1397506 -0.28883272
+		 -0.20340779 -0.32133043 -0.12951702 -0.26657909 -0.22743407 -0.31656688 -0.13954319
+		 -0.28898329 -0.20340762 -0.32158667 -0.12858701 -0.26688051 -0.2277354 -0.3174969
+		 -0.12573101 -0.24255365 -0.24911368 -0.30554193 -0.12834321 -0.26695955 -0.22781444
+		 -0.31774074 -0.12475344 -0.24255288 -0.24968764 -0.30633324 -0.12955458 -0.21853414
+		 -0.26632535 -0.2883572 -0.12449718 -0.2425527 -0.24983817 -0.30654067 -0.12862507
+		 -0.21823132 -0.26711577 -0.28893238 -0.14061345 -0.19687179 -0.27738419 -0.26669484
+		 -0.12838139 -0.2181519 -0.26732305 -0.28908318 -0.13982303 -0.19629657 -0.2783137
+		 -0.26699764 -0.15782513 -0.17968705 -0.2812078 -0.2426753 -0.13961582 -0.19614577
+		 -0.27855736 -0.26707703 -0.15725116 -0.17889574 -0.28218538 -0.24267614 -0.17950477
+		 -0.16866201 -0.27742183 -0.21864986 -0.15710068 -0.17868832 -0.28244165 -0.24267626
+		 -0.17920344 -0.16773203 -0.27835181 -0.21834853 -0.20353025 -0.16487607 -0.26639691
+		 -0.19697019 -0.17912439 -0.16748828 -0.2785956 -0.21826944 -0.20353103 -0.16389847
+		 -0.26718825 -0.19639626 -0.22754978 -0.16869959 -0.24921212 -0.17975855 -0.20353119
+		 -0.16364217 -0.26739568 -0.1962457 -0.2278526 -0.16777012 -0.24978736 -0.17896813
+		 -0.22793196 -0.16752645 -0.24993816 -0.17876095 0.27191198 -0.86977345 0.27227834
+		 -0.84317243 0.26641732 -0.84306759 0.26605096 -0.86966866 0.2726447 -0.81657147 0.26678368
+		 -0.81646663 0.27154565 -0.89637446 0.2656846 -0.89626968 0.27117929 -0.92297554 0.26531824
+		 -0.9228707 0.27081293 -0.94957656 0.26495188 -0.94947171 0.27044657 -0.97617757 0.26458552
+		 -0.97607273 0.27557558 -0.60376346 0.27594194 -0.57716233 0.27008089 -0.57705748
+		 0.26971453 -0.60365856 0.27630827 -0.55056143 0.27044725 -0.55045658 0.27520922 -0.63036442
+		 0.26934817 -0.63025963 0.27484286 -0.65696537 0.26898181 -0.65686053 0.2744765 -0.68356645
+		 0.26861545 -0.68346167 0.27411014 -0.71016747 0.26824909 -0.71006262 0.27740735 -0.47075823
+		 0.27777371 -0.44415724 0.27191266 -0.44405243 0.27154633 -0.47065341 0.27704099 -0.49735928
+		 0.27117997 -0.49725446 0.27667463 -0.52396035 0.27081361 -0.52385557 0.27374378 -0.73676842
+		 0.26788273 -0.73666364 0.27337742 -0.76336944 0.26751637 -0.76326466 0.27301106 -0.78997052
+		 0.26715001 -0.78986567;
+createNode transferAttributes -n "transferAttributes16";
+	rename -uid "25D1D933-475A-4F12-3605-6A91C336153F";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode objectSet -n "set16";
+	rename -uid "4E735808-44BA-BDDC-6AE4-B1A04CF46CF1";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId214";
+	rename -uid "D281ACCE-4174-2D0E-3176-AC961E8D7FCF";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts155";
+	rename -uid "835BE94D-4CF3-E1C3-20FA-67B31ACCD313";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode transferAttributes -n "transferAttributes17";
+	rename -uid "6166782F-45DD-5BDC-270C-9394C4DF5ECB";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode objectSet -n "set17";
+	rename -uid "96E449D3-4927-8F5A-1D16-51BC327F75AF";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId215";
+	rename -uid "E6499EA6-4F57-DDA6-0BF3-C0ADD2184871";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts156";
+	rename -uid "61623ABF-43AB-5C4B-49E2-B78BB1A78E68";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode polyTweakUV -n "polyTweakUV59";
+	rename -uid "F176E568-454D-D214-6BEE-4091E11BD86C";
+	setAttr ".uopa" yes;
+	setAttr -s 164 ".uvtk[0:163]" -type "float2" 0.12419699 0.044673458 0.11524276
+		 0.027066506 0.11588536 0.026600406 0.12495212 0.044428706 0.064137027 0.064136937
+		 0.1012861 0.01308836 0.10175325 0.01244643 0.11605401 0.026478052 0.12515016 0.044364557
+		 0.12727185 0.064185545 0.12806584 0.064186186 0.083692938 0.0041071381 0.083938912
+		 0.0033523217 0.10187574 0.012278177 0.12827395 0.06418629 0.12416695 0.083692968
+		 0.12492181 0.083938807 0.064185575 0.0010021431 0.064186215 0.0002082123 0.084003404
+		 0.0031543393 0.1251197 0.084003448 0.1151856 0.10128599 0.11582752 0.10175312 0.044673458
+		 0.0040769987 0.044428721 0.0033218078 0.06418632 0 0.11599593 0.10187563 0.10120754
+		 0.11524269 0.10167371 0.11588541 0.027066551 0.013031192 0.026600443 0.01238858 0.044364475
+		 0.0031237556 0.10179587 0.11605382 0.083600581 0.1241968 0.083845347 0.12495214 0.013088368
+		 0.026987866 0.012446478 0.026520744 0.026478156 0.012220126 0.083909497 0.12515008
+		 0.064088464 0.12727201 0.064087823 0.12806594 0.0041071232 0.044580981 0.0033522621
+		 0.044335157 0.012278177 0.026398309 0.064087704 0.12827384 0.044581071 0.12416682
+		 0.044335157 0.1249218 0.001002101 0.0640883 0.00020815269 0.064087659 0.003154357
+		 0.04427065 0.044270642 0.12511969 0.026987977 0.11518571 0.026520796 0.11582762 0.0040770937
+		 0.083600491 0.0033218581 0.083845288 0 0.064087704 0.026398353 0.11599597 0.013031263
+		 0.10120752 0.012388602 0.10167363 0.0031238291 0.083909541 0.012220144 0.10179582
+		 0.044580221 0.26559085 0.026987158 0.2566092 0.064136907 0.20556122 0.044334278 0.26634556
+		 0.026519977 0.25725108 0.013030663 0.2426309 0.064087525 0.26869607 0.04426983 0.26654369
+		 0.026397541 0.25741965 0.012388039 0.24309695 0.064086825 0.26949 0.0040768236 0.22502387
+		 0.083599687 0.26562136 0.012219548 0.24321914 0.06408672 0.2696979 0.0033215377 0.22526842
+		 0.083844423 0.26637632 0.0010021045 0.20551175 0.10120678 0.25666732 0.0031235237
+		 0.22533268 0.083908647 0.2665745 0.0002081545 0.20551091 0.10167286 0.25731009 0.0041073691
+		 0.18600434 0.11518517 0.24271089 0 0.20551103 0.10179511 0.25747824 0.0033524195
+		 0.18575844 0.11582708 0.24317807 0.013088766 0.16841143 0.12416649 0.22511786 0.0031545702
+		 0.18569398 0.11599535 0.24330062 0.012446836 0.1679444 0.12492144 0.22536391 0.027067147
+		 0.15445489 0.12727183 0.20561045 0.012278505 0.16782179 0.12511933 0.2254281 0.026601017
+		 0.15381211 0.12806576 0.20561105 0.044674173 0.14550105 0.12419698 0.18609837 0.026478797
+		 0.15364385 0.12827384 0.20561147 0.044429436 0.14474583 0.12495241 0.18585372 0.06418632
+		 0.14242637 0.11524317 0.16849142 0.044365272 0.14454773 0.12515026 0.18578941 0.064186975
+		 0.14163238 0.11588585 0.16802526 0.083693668 0.14553159 0.10128662 0.15451309 0.064187154
+		 0.14142421 0.11605442 0.16790307 0.083939627 0.1447767 0.10175383 0.15387115 0.084004089
+		 0.14457873 0.10187623 0.15370283 0.12858695 0.012577474 0.12828949 0.010481894 0.13304955
+		 0.010473609 0.13334715 0.012569189 0.12799188 0.0083861351 0.13275194 0.0083781481
+		 0.12888482 0.014672995 0.13364458 0.01466465 0.1291821 0.016768456 0.13394207 0.016760051
+		 0.12947971 0.018863916 0.13423967 0.01885587 0.12977731 0.020959377 0.13453728 0.020951211
+		 0.12561175 -0.0083780289 0.12531415 -0.010473371 0.13007426 -0.010481596 0.13037187
+		 -0.0083861351 0.12501645 -0.0125691 0.12977666 -0.012577266 0.12590936 -0.0062824488
+		 0.13066918 -0.0062907934 0.12620696 -0.0041868091 0.13096678 -0.0041949749 0.12650418
+		 -0.0020913184 0.13126439 -0.0020996332 0.12680188 4.1723251e-06 0.13156199 -4.1127205e-06
+		 0.12412393 -0.018855602 0.12382632 -0.020951122 0.12858653 -0.020959377 0.12888414
+		 -0.018863887 0.12442154 -0.016759992 0.12918174 -0.016768247 0.12471899 -0.014664501
+		 0.12947905 -0.014672875 0.12709948 0.0020995736 0.1318593 0.0020914078 0.12739709
+		 0.0041952133 0.13215685 0.0041870475 0.1276944 0.0062907338 0.13245451 0.0062826872;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -73721,22 +74193,28 @@ connectAttr "polyTweakUV45.out" "polySurfaceShape98.i";
 connectAttr "groupId171.id" "polySurfaceShape98.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape98.iog.og[0].gco";
 connectAttr "polyTweakUV45.uvtk[0]" "polySurfaceShape98.uvst[0].uvtw";
-connectAttr "transferAttributes1.og[0]" "polySurfaceShape99.i";
+connectAttr "transferAttributes12.og[0]" "polySurfaceShape99.i";
 connectAttr "groupId172.id" "polySurfaceShape99.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape99.iog.og[0].gco";
 connectAttr "groupId187.id" "polySurfaceShape99.iog.og[1].gid";
 connectAttr "set1.mwc" "polySurfaceShape99.iog.og[1].gco";
 connectAttr "groupId188.id" "polySurfaceShape99.iog.og[2].gid";
 connectAttr "tweakSet1.mwc" "polySurfaceShape99.iog.og[2].gco";
+connectAttr "groupId209.id" "polySurfaceShape99.iog.og[3].gid";
+connectAttr "set12.mwc" "polySurfaceShape99.iog.og[3].gco";
 connectAttr "tweak1.vl[0].vt[0]" "polySurfaceShape99.twl";
 connectAttr "polyAutoProj63.out" "polySurfaceShape99Orig.i";
-connectAttr "transferAttributes10.og[0]" "polySurfaceShape100.i";
+connectAttr "transferAttributes17.og[0]" "polySurfaceShape100.i";
 connectAttr "groupId173.id" "polySurfaceShape100.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape100.iog.og[0].gco";
 connectAttr "groupId205.id" "polySurfaceShape100.iog.og[3].gid";
 connectAttr "set10.mwc" "polySurfaceShape100.iog.og[3].gco";
 connectAttr "groupId206.id" "polySurfaceShape100.iog.og[4].gid";
 connectAttr "tweakSet10.mwc" "polySurfaceShape100.iog.og[4].gco";
+connectAttr "groupId214.id" "polySurfaceShape100.iog.og[5].gid";
+connectAttr "set16.mwc" "polySurfaceShape100.iog.og[5].gco";
+connectAttr "groupId215.id" "polySurfaceShape100.iog.og[6].gid";
+connectAttr "set17.mwc" "polySurfaceShape100.iog.og[6].gco";
 connectAttr "tweak10.vl[0].vt[0]" "polySurfaceShape100.twl";
 connectAttr "polyAutoProj62.out" "polySurfaceShape100Orig.i";
 connectAttr "transferAttributes6.og[0]" "polySurfaceShape101.i";
@@ -73748,16 +74226,19 @@ connectAttr "groupId198.id" "polySurfaceShape101.iog.og[2].gid";
 connectAttr "tweakSet6.mwc" "polySurfaceShape101.iog.og[2].gco";
 connectAttr "tweak6.vl[0].vt[0]" "polySurfaceShape101.twl";
 connectAttr "polyAutoProj61.out" "polySurfaceShape101Orig.i";
-connectAttr "transferAttributes3.og[0]" "polySurfaceShape102.i";
+connectAttr "transferAttributes15.og[0]" "polySurfaceShape102.i";
 connectAttr "groupId175.id" "polySurfaceShape102.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape102.iog.og[0].gco";
 connectAttr "groupId191.id" "polySurfaceShape102.iog.og[1].gid";
 connectAttr "set3.mwc" "polySurfaceShape102.iog.og[1].gco";
 connectAttr "groupId192.id" "polySurfaceShape102.iog.og[2].gid";
 connectAttr "tweakSet3.mwc" "polySurfaceShape102.iog.og[2].gco";
+connectAttr "groupId213.id" "polySurfaceShape102.iog.og[3].gid";
+connectAttr "set15.mwc" "polySurfaceShape102.iog.og[3].gco";
 connectAttr "tweak3.vl[0].vt[0]" "polySurfaceShape102.twl";
+connectAttr "polyTweakUV57.uvtk[0]" "polySurfaceShape102.uvst[0].uvtw";
 connectAttr "polyAutoProj60.out" "polySurfaceShape102Orig.i";
-connectAttr "transferAttributes11.og[0]" "polySurfaceShape103.i";
+connectAttr "polyTweakUV58.out" "polySurfaceShape103.i";
 connectAttr "groupId176.id" "polySurfaceShape103.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape103.iog.og[0].gco";
 connectAttr "groupId207.id" "polySurfaceShape103.iog.og[1].gid";
@@ -73765,6 +74246,7 @@ connectAttr "set11.mwc" "polySurfaceShape103.iog.og[1].gco";
 connectAttr "groupId208.id" "polySurfaceShape103.iog.og[2].gid";
 connectAttr "tweakSet11.mwc" "polySurfaceShape103.iog.og[2].gco";
 connectAttr "tweak11.vl[0].vt[0]" "polySurfaceShape103.twl";
+connectAttr "polyTweakUV58.uvtk[0]" "polySurfaceShape103.uvst[0].uvtw";
 connectAttr "polyAutoProj59.out" "polySurfaceShape103Orig.i";
 connectAttr "polyTweakUV55.out" "polySurfaceShape104.i";
 connectAttr "groupId177.id" "polySurfaceShape104.iog.og[0].gid";
@@ -73796,11 +74278,19 @@ connectAttr "groupId200.id" "polySurfaceShape108.iog.og[2].gid";
 connectAttr "tweakSet7.mwc" "polySurfaceShape108.iog.og[2].gco";
 connectAttr "tweak7.vl[0].vt[0]" "polySurfaceShape108.twl";
 connectAttr "polyAutoProj54.out" "polySurfaceShape108Orig.i";
-connectAttr "polyTweakUV50.out" "polySurfaceShape109.i";
+connectAttr "transferAttributes14.og[0]" "polySurfaceShape109.i";
 connectAttr "groupId182.id" "polySurfaceShape109.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape109.iog.og[0].gco";
-connectAttr "polyTweakUV50.uvtk[0]" "polySurfaceShape109.uvst[0].uvtw";
-connectAttr "transferAttributes9.og[0]" "polySurfaceShape110.i";
+connectAttr "groupId210.id" "polySurfaceShape109.iog.og[1].gid";
+connectAttr "set13.mwc" "polySurfaceShape109.iog.og[1].gco";
+connectAttr "groupId211.id" "polySurfaceShape109.iog.og[2].gid";
+connectAttr "tweakSet12.mwc" "polySurfaceShape109.iog.og[2].gco";
+connectAttr "groupId212.id" "polySurfaceShape109.iog.og[3].gid";
+connectAttr "set14.mwc" "polySurfaceShape109.iog.og[3].gco";
+connectAttr "tweak12.vl[0].vt[0]" "polySurfaceShape109.twl";
+connectAttr "polyTweakUV50.uvtk[0]" "polySurfaceShape109Orig.uvst[0].uvtw";
+connectAttr "polyTweakUV50.out" "polySurfaceShape109Orig.i";
+connectAttr "polyTweakUV59.out" "polySurfaceShape110.i";
 connectAttr "groupId183.id" "polySurfaceShape110.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape110.iog.og[0].gco";
 connectAttr "groupId203.id" "polySurfaceShape110.iog.og[1].gid";
@@ -73808,6 +74298,7 @@ connectAttr "set9.mwc" "polySurfaceShape110.iog.og[1].gco";
 connectAttr "groupId204.id" "polySurfaceShape110.iog.og[2].gid";
 connectAttr "tweakSet9.mwc" "polySurfaceShape110.iog.og[2].gco";
 connectAttr "tweak9.vl[0].vt[0]" "polySurfaceShape110.twl";
+connectAttr "polyTweakUV59.uvtk[0]" "polySurfaceShape110.uvst[0].uvtw";
 connectAttr "polyAutoProj52.out" "polySurfaceShape110Orig.i";
 connectAttr "transferAttributes8.og[0]" "polySurfaceShape111.i";
 connectAttr "groupId184.id" "polySurfaceShape111.iog.og[0].gid";
@@ -75146,6 +75637,64 @@ connectAttr "polySurfaceShape103.iog.og[2]" "tweakSet11.dsm" -na;
 connectAttr "tweak11.msg" "tweakSet11.ub[0]";
 connectAttr "polySurfaceShape103Orig.w" "groupParts149.ig";
 connectAttr "groupId208.id" "groupParts149.gi";
+connectAttr "transferAttributes3.og[0]" "polyTweakUV57.ip";
+connectAttr "groupParts150.og" "transferAttributes12.ip[0].ig";
+connectAttr "groupId209.id" "transferAttributes12.ip[0].gi";
+connectAttr "polySurfaceShape102.w" "transferAttributes12.src[0]";
+connectAttr "groupId209.msg" "set12.gn" -na;
+connectAttr "polySurfaceShape99.iog.og[3]" "set12.dsm" -na;
+connectAttr "transferAttributes12.msg" "set12.ub[0]";
+connectAttr "transferAttributes1.og[0]" "groupParts150.ig";
+connectAttr "groupId209.id" "groupParts150.gi";
+connectAttr "groupParts151.og" "transferAttributes13.ip[0].ig";
+connectAttr "groupId210.id" "transferAttributes13.ip[0].gi";
+connectAttr "polySurfaceShape99.w" "transferAttributes13.src[0]";
+connectAttr "groupParts152.og" "tweak12.ip[0].ig";
+connectAttr "groupId211.id" "tweak12.ip[0].gi";
+connectAttr "groupId210.msg" "set13.gn" -na;
+connectAttr "polySurfaceShape109.iog.og[1]" "set13.dsm" -na;
+connectAttr "transferAttributes13.msg" "set13.ub[0]";
+connectAttr "tweak12.og[0]" "groupParts151.ig";
+connectAttr "groupId210.id" "groupParts151.gi";
+connectAttr "groupId211.msg" "tweakSet12.gn" -na;
+connectAttr "polySurfaceShape109.iog.og[2]" "tweakSet12.dsm" -na;
+connectAttr "tweak12.msg" "tweakSet12.ub[0]";
+connectAttr "polySurfaceShape109Orig.w" "groupParts152.ig";
+connectAttr "groupId211.id" "groupParts152.gi";
+connectAttr "groupParts153.og" "transferAttributes14.ip[0].ig";
+connectAttr "groupId212.id" "transferAttributes14.ip[0].gi";
+connectAttr "polySurfaceShape99.w" "transferAttributes14.src[0]";
+connectAttr "groupId212.msg" "set14.gn" -na;
+connectAttr "polySurfaceShape109.iog.og[3]" "set14.dsm" -na;
+connectAttr "transferAttributes14.msg" "set14.ub[0]";
+connectAttr "transferAttributes13.og[0]" "groupParts153.ig";
+connectAttr "groupId212.id" "groupParts153.gi";
+connectAttr "groupParts154.og" "transferAttributes15.ip[0].ig";
+connectAttr "groupId213.id" "transferAttributes15.ip[0].gi";
+connectAttr "polySurfaceShape99.w" "transferAttributes15.src[0]";
+connectAttr "groupId213.msg" "set15.gn" -na;
+connectAttr "polySurfaceShape102.iog.og[3]" "set15.dsm" -na;
+connectAttr "transferAttributes15.msg" "set15.ub[0]";
+connectAttr "polyTweakUV57.out" "groupParts154.ig";
+connectAttr "groupId213.id" "groupParts154.gi";
+connectAttr "transferAttributes11.og[0]" "polyTweakUV58.ip";
+connectAttr "groupParts155.og" "transferAttributes16.ip[0].ig";
+connectAttr "groupId214.id" "transferAttributes16.ip[0].gi";
+connectAttr "polySurfaceShape103.w" "transferAttributes16.src[0]";
+connectAttr "groupId214.msg" "set16.gn" -na;
+connectAttr "polySurfaceShape100.iog.og[5]" "set16.dsm" -na;
+connectAttr "transferAttributes16.msg" "set16.ub[0]";
+connectAttr "transferAttributes10.og[0]" "groupParts155.ig";
+connectAttr "groupId214.id" "groupParts155.gi";
+connectAttr "groupParts156.og" "transferAttributes17.ip[0].ig";
+connectAttr "groupId215.id" "transferAttributes17.ip[0].gi";
+connectAttr "polySurfaceShape103.w" "transferAttributes17.src[0]";
+connectAttr "groupId215.msg" "set17.gn" -na;
+connectAttr "polySurfaceShape100.iog.og[6]" "set17.dsm" -na;
+connectAttr "transferAttributes17.msg" "set17.ub[0]";
+connectAttr "transferAttributes16.og[0]" "groupParts156.ig";
+connectAttr "groupId215.id" "groupParts156.gi";
+connectAttr "transferAttributes9.og[0]" "polyTweakUV59.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pSphereShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
