@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: UV MARK II CART.ma
-//Last modified: Sat, Apr 21, 2018 05:03:34 PM
+//Last modified: Sat, Apr 21, 2018 05:05:13 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2DA622F3-467B-FE0A-D325-FE83140989E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.5626388702979253 0.80984851604163643 -0.47335233098958207 ;
-	setAttr ".r" -type "double3" 704.66164723383645 -20758.59999999842 0 ;
+	setAttr ".t" -type "double3" 0.28126532258530124 0.18866430101476542 1.3350712652391541 ;
+	setAttr ".r" -type "double3" 725.66164723383383 -20531.399999998255 -1.0139269252049509e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E5E83CA1-49E4-67C9-DEAA-9CAACAE0D0F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1.6556719489645508;
+	setAttr ".coi" 1.0117206997571451;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -52344,11 +52344,13 @@ createNode transform -n "pCylinder7";
 createNode mesh -n "pCylinderShape5" -p "pCylinder7";
 	rename -uid "BBDC1A92-48E2-FC49-25F9-48A06424A9E2";
 	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.42518158257007599 0.18430429708678275 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
@@ -52368,6 +52370,18 @@ createNode mesh -n "pCylinderShape5" -p "pCylinder7";
 		0 -2.3841858e-07 2.682209e-07 0 1.1920929e-07 -3.5692938e-07 0 -1.013279e-06 -5.364418e-07 
 		0 6.5565109e-07 5.6624413e-07 0 -1.3411045e-07 2.3841858e-07 0 1.4305115e-06 3.5762787e-07 
 		0 -1.5199184e-06 3.5762787e-07 0 1.4305115e-06;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode mesh -n "pCylinderShape5Orig" -p "pCylinder7";
+	rename -uid "0FFA5105-4F5B-C0F3-A34E-36B68F13BCE3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder8";
 	rename -uid "4A63C1AF-4A36-7C40-1201-D88B9CF86E26";
@@ -60355,6 +60369,7 @@ createNode mesh -n "polySurfaceShape105" -p "polySurface107";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.1699030976742506 0.50000007078051567 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -72780,6 +72795,77 @@ createNode groupParts -n "groupParts135";
 	rename -uid "F0A5961C-4E32-8FD1-3B52-B2A1EBF4E05B";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode polyMapSewMove -n "polyMapSewMove253";
+	rename -uid "97DA86D4-402A-E833-107F-C1A30ADB2E32";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[57]";
+createNode polyMapSewMove -n "polyMapSewMove254";
+	rename -uid "441798BC-4C01-62F3-7CF0-F4AE7A81F8F1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[41]";
+createNode polyMapSewMove -n "polyMapSewMove255";
+	rename -uid "FD9B41D7-4735-A124-3C70-88800C3C1980";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[51]";
+createNode polyTweakUV -n "polyTweakUV54";
+	rename -uid "08242B43-45D3-6607-DC06-3AB73EE1F4B7";
+	setAttr ".uopa" yes;
+	setAttr -s 84 ".uvtk[0:83]" -type "float2" 0.10000001 -3.3527613e-08
+		 0.10000004 1.8626451e-08 0.10000001 2.6077032e-08 0.10000001 -5.2154064e-08 0.099999934
+		 -1.8626451e-08 0.10000001 2.2351742e-08 0.10000004 3.9115548e-08 0.099999964 -3.3527613e-08
+		 0.10000005 2.4214387e-08 0.099999979 -4.0978193e-08 0.10000004 7.4505806e-09 0.10000002
+		 4.2840838e-08 0.099999934 -3.259629e-08 0.099999994 2.6077032e-08 0.099999979 -1.6298145e-08
+		 0.10000002 1.0244548e-08 0.10000004 2.5611371e-08 0.099999979 -3.0733645e-08 0.10000001
+		 2.3283064e-09 0.099999964 -1.44355e-08 0.099999994 2.6542693e-08 0.10000014 -3.0035153e-08
+		 0.099999994 3.0267984e-08 0.10000004 8.1956387e-08 0.099999905 -7.7299774e-08 0.10000004
+		 3.981404e-08 0.099999964 -2.9802322e-08 0.099999949 -3.3993274e-08 0.1000001 8.9406967e-08
+		 0.099999905 2.2351742e-08 0.099999964 1.4901161e-08 0.10000001 -6.2398612e-08 0.099999905
+		 5.7742e-08 0.1000001 -4.1909516e-08 0.099999994 -5.2154064e-08 0.099999964 7.6368451e-08
+		 0.10000011 3.7252903e-09 0.1000001 1.8626451e-09 0.10000004 -6.7055225e-08 0.099999979
+		 4.6566129e-08 0.09999992 -3.7252903e-09 0.099999875 -6.3329935e-08 -0.0018079579
+		 -0.027421176 -0.0020956583 -0.02742064 -0.002199322 0.027427273 -0.0019116327 0.027426718
+		 -0.0018677041 -0.027420044 -0.0019713677 0.027427828 -0.00053945929 -0.027421713
+		 -0.00064311922 0.027426125 -0.0016395561 -0.027419508 -0.0017432198 0.027428383 -0.0019272491
+		 -0.027418971 -0.0020309128 0.027428938 -0.0031957552 -0.027418375 -0.0032994188 0.027429493
+		 0.00096779317 -0.027426839 0.00068009645 -0.027426302 0.00057643652 0.02742184 0.00086413324
+		 0.027421284 0.00090815127 -0.027425706 0.00080449134 0.027422395 0.002236411 -0.027427375
+		 0.0021327361 0.027420754 0.0011362135 -0.02742517 0.0010325462 0.02742295 0.00084862858
+		 -0.027424634 0.00074496865 0.027423505 -0.00041999668 -0.027423978 -0.00052365661
+		 0.027423963 -0.00025176257 -0.027422249 -0.00035542995 0.027425533 -0.00047972798
+		 -0.027422786 -0.00058338791 0.027424978 -0.0007076785 -0.027423322 -0.00081133842
+		 0.027424421 0.0023555905 -0.02742964 0.0020679832 -0.027429044 0.0019643158 0.027419113
+		 0.0022519082 0.027418558 0.0022960454 -0.027428508 0.0021923631 0.027419668 0.0025240853
+		 -0.027427971 0.002420418 0.027420223;
+createNode transferAttributes -n "transferAttributes5";
+	rename -uid "C9589D09-4021-BA2B-3FD5-F9ACE8B78A30";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode tweak -n "tweak5";
+	rename -uid "A605D976-469A-6980-E560-43AE192C9AE6";
+createNode objectSet -n "set5";
+	rename -uid "8F4BD117-4FEB-407F-5ADF-F98C1124E0E9";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId195";
+	rename -uid "C51E2F7F-4DC9-BBC6-188F-A1AC5D70956A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts136";
+	rename -uid "E84B2CEF-44D2-C825-3B99-DE919EDCD2C6";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet5";
+	rename -uid "2A84B2B2-46D1-0CBF-71AD-10BB3472A751";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId196";
+	rename -uid "07A272C7-4152-1B1D-9CE6-AF8D3A440348";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts137";
+	rename -uid "E298B0BB-4806-0458-4266-D0B7966F025B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -73074,7 +73160,13 @@ connectAttr ":initialShadingGroup.mwc" "polySurface28Shape31.iog.og[0].gco";
 connectAttr "polyTweakUV34.out" "polySurface28Shape31.i";
 connectAttr "polyTweakUV34.uvtk[0]" "polySurface28Shape31.uvst[0].uvtw";
 connectAttr "layer4.di" "pCylinder7.do";
-connectAttr "polyAutoProj44.out" "pCylinderShape5.i";
+connectAttr "transferAttributes5.og[0]" "pCylinderShape5.i";
+connectAttr "groupId195.id" "pCylinderShape5.iog.og[0].gid";
+connectAttr "set5.mwc" "pCylinderShape5.iog.og[0].gco";
+connectAttr "groupId196.id" "pCylinderShape5.iog.og[1].gid";
+connectAttr "tweakSet5.mwc" "pCylinderShape5.iog.og[1].gco";
+connectAttr "tweak5.vl[0].vt[0]" "pCylinderShape5.twl";
+connectAttr "polyAutoProj44.out" "pCylinderShape5Orig.i";
 connectAttr "layer4.di" "pCylinder8.do";
 connectAttr "groupParts73.og" "pCylinderShape8.i";
 connectAttr "groupId129.id" "pCylinderShape8.iog.og[0].gid";
@@ -73283,9 +73375,10 @@ connectAttr ":initialShadingGroup.mwc" "polySurfaceShape103.iog.og[0].gco";
 connectAttr "polyAutoProj58.out" "polySurfaceShape104.i";
 connectAttr "groupId177.id" "polySurfaceShape104.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape104.iog.og[0].gco";
-connectAttr "polyAutoProj57.out" "polySurfaceShape105.i";
+connectAttr "polyTweakUV54.out" "polySurfaceShape105.i";
 connectAttr "groupId178.id" "polySurfaceShape105.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape105.iog.og[0].gco";
+connectAttr "polyTweakUV54.uvtk[0]" "polySurfaceShape105.uvst[0].uvtw";
 connectAttr "transferAttributes2.og[0]" "polySurfaceShape106.i";
 connectAttr "groupId179.id" "polySurfaceShape106.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape106.iog.og[0].gco";
@@ -74522,6 +74615,25 @@ connectAttr "polySurfaceShape113.iog.og[2]" "tweakSet4.dsm" -na;
 connectAttr "tweak4.msg" "tweakSet4.ub[0]";
 connectAttr "polySurfaceShape113Orig.w" "groupParts135.ig";
 connectAttr "groupId194.id" "groupParts135.gi";
+connectAttr "polyAutoProj57.out" "polyMapSewMove253.ip";
+connectAttr "polyMapSewMove253.out" "polyMapSewMove254.ip";
+connectAttr "polyMapSewMove254.out" "polyMapSewMove255.ip";
+connectAttr "polyMapSewMove255.out" "polyTweakUV54.ip";
+connectAttr "groupParts136.og" "transferAttributes5.ip[0].ig";
+connectAttr "groupId195.id" "transferAttributes5.ip[0].gi";
+connectAttr "polySurfaceShape105.w" "transferAttributes5.src[0]";
+connectAttr "groupParts137.og" "tweak5.ip[0].ig";
+connectAttr "groupId196.id" "tweak5.ip[0].gi";
+connectAttr "groupId195.msg" "set5.gn" -na;
+connectAttr "pCylinderShape5.iog.og[0]" "set5.dsm" -na;
+connectAttr "transferAttributes5.msg" "set5.ub[0]";
+connectAttr "tweak5.og[0]" "groupParts136.ig";
+connectAttr "groupId195.id" "groupParts136.gi";
+connectAttr "groupId196.msg" "tweakSet5.gn" -na;
+connectAttr "pCylinderShape5.iog.og[1]" "tweakSet5.dsm" -na;
+connectAttr "tweak5.msg" "tweakSet5.ub[0]";
+connectAttr "pCylinderShape5Orig.w" "groupParts137.ig";
+connectAttr "groupId196.id" "groupParts137.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pSphereShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
