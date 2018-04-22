@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: UV LAYOUT PRACTICE II CART.ma
-//Last modified: Sat, Apr 21, 2018 06:54:53 PM
+//Last modified: Sat, Apr 21, 2018 06:55:29 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,15 +15,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2DA622F3-467B-FE0A-D325-FE83140989E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.9833328889934094 1.9436905330876724 -2.2530885756492807 ;
-	setAttr ".r" -type "double3" 341.38683807445017 -232.71297708864677 0 ;
+	setAttr ".t" -type "double3" 3.5745872929596523 2.0505879146909285 -0.8657964783055403 ;
+	setAttr ".r" -type "double3" 339.5868380744501 -258.31297708864673 0 ;
 	setAttr ".rp" -type "double3" 1.3877787807814457e-17 -2.7755575615628914e-16 0 ;
 	setAttr ".rpt" -type "double3" -3.5270887474450015e-16 -2.823520911493275e-16 -9.7762977141700709e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E5E83CA1-49E4-67C9-DEAA-9CAACAE0D0F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.6101383433878795;
+	setAttr ".coi" 3.6101383433878835;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
