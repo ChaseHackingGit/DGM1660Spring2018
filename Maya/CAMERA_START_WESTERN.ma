@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: CAMERA_START_WESTERN.ma
-//Last modified: Tue, Apr 24, 2018 03:00:15 PM
+//Last modified: Tue, Apr 24, 2018 03:04:48 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "24724F6A-49D9-1A4A-36F1-E0BD2DC8C87C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.1746994762402672 0.61631316304765971 -4.1305083664419815 ;
-	setAttr ".r" -type "double3" 3.2616472702962329 509.39999999975237 0 ;
+	setAttr ".t" -type "double3" 0.65405533955775874 0.80313186365224198 -1.8529096645802363 ;
+	setAttr ".r" -type "double3" -6.3383527297031188 510.99999999972209 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C19402B1-4400-971A-5F15-8D8289F55AA0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 4.7221718013533556;
+	setAttr ".coi" 1.9729730123243865;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
